@@ -1,0 +1,66 @@
+
+.spotify__home-container_side-bar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    height: 100vh ;
+}
+
+
+.spotify__home-container_playlist-container
+{
+    background-color:#191919 ;
+    height: 100vh;
+
+}
+
+.spotify__home-container_side-bar-item
+{
+    
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    margin: 10px;
+    margin-left: 10px;
+    padding-left: 18px;
+
+}
+
+.spotify__home-container_side-bar-item > a:hover
+{
+    cursor: pointer;
+    color: lightgrey;
+}
+
+.spotify__home-container_playlist-container
+{
+    background-color: #1e1e1e;
+    height: 100vh;
+    padding: 0px;
+    overflow-y: auto;
+
+
+}
+
+.playlist_card_collection
+{
+    display: flex;
+    gap:20px;
+    max-width: 1500px;
+    overflow-x:auto ;
+    height: 100vh;
+    position: absolute;
+}
+
+#song_card_item
+{
+    min-width:185px;
+}
+
+.newdiv
+{
+    overflow:hidden
+}

@@ -1,0 +1,195 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="App__main-view">
+    <div class="App__top-gradient"></div>
+    <div class="App__header-placeholder"></div>
+    <section class="App__section App__quick-links">
+        <h1>Good afternoon</h1>
+        <div class="App__quick-links-container">
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img">♥</div>
+                <span>Liked Songs</span>
+            </div>
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img"></div>
+                <span>Daily Mix 1</span>
+            </div>
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img"></div>
+                <span>Discover Weekly</span>
+            </div>
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img"></div>
+                <span>Daily Mix 2</span>
+            </div>
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img"></div>
+                <span>Daily Mix 3</span>
+            </div>
+            <div class="App__quick-link">
+                <div class="App__quick-link-featured-img"></div>
+                <span>Daily Mix 4</span>
+            </div>
+        </div>
+    </section>
+    <section class="App__section App__your-shows">
+        <div class="App__section-header">
+            <h3>Your shows</h3>
+            <span>SEE ALL</span>
+        </div>
+        <div class="App__section-grid-container">
+            <div class="App__section-grid-item" (click)="playSong('TED Radio Hour')">
+                <div class="featured-image"></div>
+                <h3>TED Radio Hour</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Short Wave')">
+                <div class="featured-image"></div>
+                <h3>Short Wave</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Post Reports')">
+                <div class="featured-image"></div>
+                <h3>Post Reports</h3>
+                <span>The Washington Post</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Planet Money')">
+                <div class="featured-image"></div>
+                <h3>Planet Money</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('How I Built this...')">
+                <div class="featured-image"></div>
+                <h3>How I Built this...</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('TED Radio Hour')">
+                <div class="featured-image"></div>
+                <h3>TED Radio Hour</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Short Wave')">
+                <div class="featured-image"></div>
+                <h3>Short Wave</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Post Reports')">
+                <div class="featured-image"></div>
+                <h3>Post Reports</h3>
+                <span>The Washington Post</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('Planet Money')">
+                <div class="featured-image"></div>
+                <h3>Planet Money</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" (click)="playSong('How I Built this...')">
+                <div class="featured-image"></div>
+                <h3>How I Built this...</h3>
+                <span>NPR</span>
+            </div>
+        </div>
+    </section>
+    <section class="App__section App__your-shows">
+        <div class="App__section-header">
+            <h3>Your top mixes</h3>
+            <span>SEE ALL</span>
+        </div>
+        <div class="App__section-grid-container">
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>TED Radio Hour</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>Short Wave</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>Post Reports</h3>
+                <span>The Washington Post</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>Planet Money</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>How I Built this...</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>TED Radio Hour</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>Short Wave</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>Post Reports</h3>
+                <span>The Washington Post</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+
+                <div class="featured-image"></div>
+                <h3>Planet Money</h3>
+                <span>NPR</span>
+            </div>
+            <div class="App__section-grid-item" id="masterPlay" (click)="playSong('How I Built this...')">
+                <audio id="audioElement" src="/assets/beatitmj.mp3"></audio>
+                <div class="featured-image"></div>
+                <h3>How I Built this...</h3>
+                <span>NPR</span>
+            </div>
+        </div>
+    </section>
+
+
+   <div class="fullplayer">
+        <div class="audio-player">
+            <div class="audio-controls">
+                <img width="60px" height="60px" src="/assets/mjj.jpeg">
+                
+                <div class="track-info" >
+                    <span class="track-title">Beat It</span>
+                    <span class="artist">Micheal Jackson</span>
+                </div>
+                <div class="ttt" onclick="playSong('Beat It')">
+                <button class="play-pause" id="masterPlay"></button> 
+                </div>
+                <div class="progress-bar">
+                    <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100" />
+                </div>
+            </div>
+            <audio id="audioPlayer" src="/assets/beatitmj.mp3"></audio>
+        </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/typescript/latest/typescript.js"></script>
+<script src="script.js"></script>
+
+  
+
+
+  
+
+
+
+
+
+
