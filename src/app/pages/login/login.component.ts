@@ -7,21 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  public usernameFormControl =new FormControl();
-  public passwordFormControl =new FormControl();
-  constructor(private router:Router)
-  {}
 
-  ngOnInit(): void {
-      
-      };
+export class LoginComponent {
 
-
-  NavigatetoHome()
-  {
-    this.router.navigate(['/','']);
-  }
 }
+
+
 
 
