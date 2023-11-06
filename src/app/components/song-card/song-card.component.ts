@@ -1,84 +1,55 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-song-card',
   templateUrl: './song-card.component.html',
   styleUrls: ['./song-card.component.css']
 })
 export class SongCardComponent implements OnInit {
+  @Input() songTitle!: string;
+  audioUrl:string="/assets/beatitmj.mp3"
+  ; // Input property to receive song data
+  audioElement: HTMLAudioElement; // Reference to the current song's audio element
+  isPlaying: boolean = false; // Flag to track playback status
+  progress: number = 0; // Track the song progress for the progress bar
 
-  //playSong!: (showName: string) => void;
-
-  @Input()
-  songTitle!: string;
-
-  constructor() {}
+constructor() {
+    this.audioElement = new Audio(); // Initialize audioElement here
+  }
 
   ngOnInit(): void {
-    this.playSong = this.playSong;
-
-  }
-  
-
- playSong(songName: string) {
-  const audioElement = new Audio('/assets/beatitmj.mp3');
-    audioElement.pause();
-  // Play the new song.
-  audioElement.play();
-}
-
-}
-
-/*
-// Define the Audio type
-type Audio = HTMLAudioElement;
-
-// Declare a variable of type Audio
-const audioElement: Audio = new Audio('/assets/beatitmj.mp3');
-
-let currentAudioElement: Audio | null = null;
-
-function playSong(audioElement: Audio) {
-  // If there is a current audio element, stop it
-  if (currentAudioElement !== null) {
-    currentAudioElement.pause();
+    this.audioElement = new Audio();
+    this.audioElement.addEventListener('ended', () => {
+      this.isPlaying = false;
+      this.progress = 0;
+    });
   }
 
-  // Store the new Audio object as the current audio element
-  currentAudioElement = audioElement;
+  playSong() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+      this.isPlaying = false;
+    } else {
+      if (this.audioElement.src === this.audioUrl) {
+        this.audioElement.play();
+      } else {
+        this.audioElement.src = this.audioUrl;
+        this.audioElement.load();
+        this.audioElement.play();
+      }
+      this.isPlaying = true;
 
-  // Play the song
-  audioElement.play();
-}
-*/
-
-
-/*
-type Audio = HTMLAudioElement;
-
-// Declare a variable of type Audio
-const audioElement: Audio = new Audio();
-
-// Create a global variable to store the current audio element
-let currentAudioElement: Audio | null = null;
-
-// Define the playSong() function
-function playSong(showName: string) {
-  // If there is a current audio element, stop it
-  if (currentAudioElement !== null) {
-    currentAudioElement.pause();
+      this.audioElement.addEventListener('timeupdate', () => {
+        this.progress = (this.audioElement.currentTime / 457) * 100;
+      });
+    }
   }
 
-  // Create a new Audio object with the path to the show
-  const audioElement = new Audio('/assets/beatitmj.mp3');
-
-  // Store the new Audio object as the current audio element
-  currentAudioElement = audioElement;
-
-  // Play the show
-  audioElement.play();
+  pauseSong() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+      this.isPlaying = false;
+    }
+  }
 }
-
-*/
