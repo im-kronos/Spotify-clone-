@@ -1,5 +1,8 @@
 # Musicapp
 
+This Project is deployed in Netlify: [subtle-pavlova-bf038c.netlify.app](subtle-pavlova-bf038c.netlify.app)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
 ## Development server
